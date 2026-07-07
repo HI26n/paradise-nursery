@@ -1,0 +1,209 @@
+.ci-page {
+  min-height: 100vh;
+  background: var(--parchment);
+}
+
+.ci-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 4rem;
+}
+
+.ci-heading {
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: var(--ink);
+}
+
+.ci-summary {
+  display: flex;
+  gap: 2rem;
+  background: var(--moss);
+  color: #fff;
+  padding: 1rem 1.4rem;
+  border-radius: 8px;
+  font-size: 1.02rem;
+  margin-bottom: 1.8rem;
+}
+
+.ci-summary strong {
+  font-family: var(--font-mono);
+}
+
+.ci-empty {
+  background: #fff;
+  border: 1px solid #e3ddc9;
+  border-radius: 10px;
+  padding: 2.4rem;
+  text-align: center;
+  color: #5b6259;
+}
+
+.ci-list {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.ci-row {
+  display: grid;
+  grid-template-columns: 70px 1.6fr auto auto auto;
+  align-items: center;
+  gap: 1.1rem;
+  background: #fff;
+  border: 1px solid #e3ddc9;
+  border-radius: 10px;
+  padding: 0.8rem 1.1rem;
+}
+
+.ci-thumb {
+  background: var(--sage);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+}
+
+.ci-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.15rem;
+  color: var(--ink);
+}
+
+.ci-unit-price {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  color: var(--moss);
+}
+
+.ci-qty {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ci-qty-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid var(--sage);
+  background: var(--parchment);
+  font-size: 1.05rem;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.ci-qty-btn:hover {
+  background: var(--sage);
+}
+
+.ci-qty-value {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  min-width: 1.4em;
+  text-align: center;
+}
+
+.ci-line-total {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--ink);
+  min-width: 4.5em;
+  text-align: right;
+}
+
+.ci-delete-btn {
+  background: transparent;
+  border: 1px solid var(--clay);
+  color: var(--clay);
+  border-radius: 6px;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.ci-delete-btn:hover {
+  background: var(--clay);
+  color: #fff;
+}
+
+.ci-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ci-btn {
+  padding: 0.75rem 1.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+}
+
+.ci-btn-primary {
+  background: var(--ochre);
+  color: var(--ink);
+}
+
+.ci-btn-primary:hover {
+  filter: brightness(0.95);
+}
+
+.ci-btn-secondary {
+  background: transparent;
+  border: 1px solid var(--moss);
+  color: var(--moss);
+}
+
+.ci-btn-secondary:hover {
+  background: var(--moss);
+  color: #fff;
+}
+
+.ci-checkout-msg {
+  margin-top: 1rem;
+  font-style: italic;
+  color: var(--moss);
+}
+
+@media (max-width: 640px) {
+  .ci-row {
+    grid-template-columns: 56px 1fr;
+    grid-template-areas:
+      'thumb info'
+      'qty qty'
+      'total delete';
+    row-gap: 0.6rem;
+  }
+  .ci-thumb {
+    grid-area: thumb;
+  }
+  .ci-info {
+    grid-area: info;
+  }
+  .ci-qty {
+    grid-area: qty;
+    justify-content: flex-start;
+  }
+  .ci-line-total {
+    grid-area: total;
+    text-align: left;
+  }
+  .ci-delete-btn {
+    grid-area: delete;
+    justify-self: end;
+  }
+}

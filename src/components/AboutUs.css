@@ -1,0 +1,11 @@
+.nn-about {
+  max-width: 560px;
+}
+
+.nn-about-text {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--parchment);
+  opacity: 0.92;
+}

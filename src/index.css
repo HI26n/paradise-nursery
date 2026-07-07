@@ -1,0 +1,58 @@
+:root {
+  /* --- Paradise Nursery design tokens --- */
+  --pine: #16281e;      /* deep background green */
+  --moss: #3b6255;      /* mid green, headers/nav */
+  --sage: #b7c9a8;      /* light green, secondary surfaces */
+  --parchment: #f3eee0; /* warm page background */
+  --ochre: #d1a345;     /* accent - CTAs, price tags */
+  --ink: #1b2420;       /* primary text */
+  --clay: #b9603f;      /* secondary accent, delete/warnings */
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--parchment);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ochre);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

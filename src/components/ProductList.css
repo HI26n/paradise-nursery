@@ -1,0 +1,121 @@
+.pl-page {
+  min-height: 100vh;
+  background: var(--parchment);
+}
+
+.pl-content {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 4rem;
+}
+
+.pl-heading {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 0.3rem;
+}
+
+.pl-sub {
+  color: var(--moss);
+  margin: 0 0 2rem;
+  font-size: 1.02rem;
+}
+
+.pl-category {
+  margin-bottom: 2.6rem;
+}
+
+.pl-category-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--moss);
+  border-bottom: 2px solid var(--sage);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.4rem;
+}
+
+.pl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.4rem;
+}
+
+.pl-card {
+  background: #fff;
+  border: 1px solid #e3ddc9;
+  border-radius: 10px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.pl-card:hover {
+  box-shadow: 0 8px 20px rgba(27, 36, 32, 0.08);
+  transform: translateY(-2px);
+}
+
+.pl-thumb {
+  background: var(--sage);
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 0;
+  margin-bottom: 0.9rem;
+}
+
+.pl-name {
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+  color: var(--ink);
+}
+
+.pl-desc {
+  font-size: 0.86rem;
+  color: #5b6259;
+  margin: 0 0 0.8rem;
+  min-height: 2.6em;
+}
+
+.pl-tag {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: var(--parchment);
+  border: 1px dashed var(--ochre);
+  border-radius: 4px;
+  padding: 0.25rem 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.pl-add-btn {
+  width: 100%;
+  padding: 0.6rem 0;
+  border: none;
+  border-radius: 6px;
+  background: var(--moss);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: background 0.15s ease;
+}
+
+.pl-add-btn:hover:not(:disabled) {
+  background: var(--pine);
+}
+
+.pl-add-btn:disabled {
+  background: #cfd6c9;
+  color: #6c7468;
+  cursor: not-allowed;
+}
